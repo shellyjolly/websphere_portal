@@ -1,2 +1,2 @@
-# websphere_portal1
+# websphere_portal
 Repository for portal
