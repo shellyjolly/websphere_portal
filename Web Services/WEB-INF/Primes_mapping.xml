@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE java-wsdl-mapping PUBLIC "-//IBM Corporation, Inc.//DTD J2EE JAX-RPC mapping 1.0//EN" "http://www.ibm.com/webservices/dtd/j2ee_jaxrpc_mapping_1_0.dtd">
+
+   <java-wsdl-mapping id="JavaWSDLMapping_1111104054218">
+      <package-mapping id="PackageMapping_1111104054218">
+         <package-type>com.itso</package-type>
+         <namespaceURI>http://itso.com</namespaceURI>
+      </package-mapping>
+      <java-xml-type-mapping id="JavaXMLTypeMapping_1111104054218">
+         <class-type>int</class-type>
+         <root-type-qname id="RootTypeQname_1111104054218">
+            <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
+            <localpart>int</localpart>
+         </root-type-qname>
+         <qname-scope>simpleType</qname-scope>
+      </java-xml-type-mapping>
+      <java-xml-type-mapping id="JavaXMLTypeMapping_1111104054219">
+         <class-type>java.lang.String</class-type>
+         <root-type-qname id="RootTypeQname_1111104054219">
+            <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
+            <localpart>string</localpart>
+         </root-type-qname>
+         <qname-scope>simpleType</qname-scope>
+      </java-xml-type-mapping>
+      <service-interface-mapping id="ServiceInterfaceMapping_1111104054218">
+         <service-interface>com.itso.PrimesService</service-interface>
+         <wsdl-service-name id="WSDLServiceName_1111104054218">
+            <namespaceURI>http://itso.com</namespaceURI>
+            <localpart>PrimesService</localpart>
+         </wsdl-service-name>
+         <port-mapping id="PortMapping_1111104054218">
+            <port-name>Primes</port-name>
+            <java-port-name>Primes</java-port-name>
+         </port-mapping>
+      </service-interface-mapping>
+      <service-endpoint-interface-mapping id="ServiceEndpointInterfaceMapping_1111104054218">
+         <service-endpoint-interface>com.itso.Primes</service-endpoint-interface>
+         <wsdl-port-type id="WSDLPortType_1111104054218">
+            <namespaceURI>http://itso.com</namespaceURI>
+            <localpart>Primes</localpart>
+         </wsdl-port-type>
+         <wsdl-binding id="WSDLBinding_1111104054218">
+            <namespaceURI>http://itso.com</namespaceURI>
+            <localpart>PrimesSoapBinding</localpart>
+         </wsdl-binding>
+         <service-endpoint-method-mapping id="ServiceEndpointMethodMapping_1111104054218">
+            <java-method-name>getPrime</java-method-name>
+            <wsdl-operation>getPrime</wsdl-operation>
+            <wrapped-element></wrapped-element>
+            <method-param-parts-mapping id="MethodParamPartsMapping_1111104054218">
+               <param-position>0</param-position>
+               <param-type>int</param-type>
+               <wsdl-message-mapping id="WSDLMessageMapping_1111104054218">
+                  <wsdl-message id="WSDLMessage_1111104054218">
+                     <namespaceURI>http://itso.com</namespaceURI>
+                     <localpart>getPrimeRequest</localpart>
+                  </wsdl-message>
+                  <wsdl-message-part-name>numDigits</wsdl-message-part-name>
+                  <parameter-mode>IN</parameter-mode>
+               </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping id="WSDLReturnValueMapping_1111104054218">
+               <method-return-value>java.lang.String</method-return-value>
+               <wsdl-message id="WSDLMessage_1111104054219">
+                  <namespaceURI>http://itso.com</namespaceURI>
+                  <localpart>getPrimeResponse</localpart>
+               </wsdl-message>
+               <wsdl-message-part-name>getPrimeReturn</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+         </service-endpoint-method-mapping>
+      </service-endpoint-interface-mapping>
+   </java-wsdl-mapping>

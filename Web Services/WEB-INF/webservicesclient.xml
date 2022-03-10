@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE webservicesclient PUBLIC "-//IBM Corporation, Inc.//DTD J2EE Web services client 1.0//EN" "http://www.ibm.com/webservices/dtd/j2ee_web_services_client_1_0.dtd">
+<webservicesclient>
+    <service-ref>
+	<description>WSDL Service PrimesService</description>
+	<service-ref-name>service/PrimesService</service-ref-name>
+	<service-interface>com.itso.PrimesService</service-interface>
+        <wsdl-file>WEB-INF/wsdl/Primes.wsdl</wsdl-file>
+        <jaxrpc-mapping-file>WEB-INF/Primes_mapping.xml</jaxrpc-mapping-file>
+        <service-qname>
+            <namespaceURI>http://itso.com</namespaceURI>
+            <localpart>PrimesService</localpart>
+        </service-qname>
+        <port-component-ref>
+            <service-endpoint-interface>com.itso.Primes</service-endpoint-interface>
+        </port-component-ref>
+    </service-ref>
+</webservicesclient>

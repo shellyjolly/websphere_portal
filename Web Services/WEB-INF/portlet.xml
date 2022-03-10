@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE portlet-app-def PUBLIC "-//IBM//DTD Portlet Application 1.1//EN" "portlet_1.1.dtd">
+<portlet-app-def>
+	<portlet-app uid="wsclientportlet.WSClientPortletPortlet.dcc73e2b20"
+		major-version="1" minor-version="0">
+		<portlet-app-name>WSClientPortlet application</portlet-app-name>
+		<portlet id="wsclientportlet.WSClientPortletPortlet"
+			href="WEB-INF/web.xml#Servlet_1111102840531" major-version="1"
+			minor-version="0">
+			<portlet-name>WSClientPortlet portlet</portlet-name>
+			<cache>
+				<expires>0</expires>
+				<shared>no</shared>
+			</cache>
+			<allows>
+				<maximized />
+				<minimized />
+			</allows>
+			<supports>
+				<markup name="html">
+					<view />
+				</markup>
+			</supports>
+		</portlet>
+	</portlet-app>
+	<concrete-portlet-app
+		uid="wsclientportlet.WSClientPortletPortlet.7b39bd2b20.1">
+		<portlet-app-name>WSClientPortlet application</portlet-app-name>
+		<concrete-portlet
+			href="#wsclientportlet.WSClientPortletPortlet">
+			<portlet-name>WSClientPortlet portlet</portlet-name>
+			<default-locale>en</default-locale>
+			<language locale="en">
+				<title>WSClientPortlet portlet</title>
+				<title-short></title-short>
+				<description></description>
+				<keywords></keywords>
+			</language>
+			<config-param>
+				<param-name>com.ibm.faces.portlet.page.view</param-name>
+				<param-value>/WSClientPortletView.jsp</param-value>
+			</config-param>
+		</concrete-portlet>
+	</concrete-portlet-app>
+</portlet-app-def>

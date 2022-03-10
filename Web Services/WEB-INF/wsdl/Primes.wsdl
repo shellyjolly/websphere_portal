@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:impl="http://itso.com" xmlns:intf="http://itso.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://itso.com">
+ <wsdl:types>
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://itso.com" xmlns:impl="http://itso.com" xmlns:intf="http://itso.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <element name="getPrime">
+    <complexType>
+     <sequence>
+      <element name="numDigits" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPrimeResponse">
+    <complexType>
+     <sequence>
+      <element name="getPrimeReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getPrimeRequest">
+
+      <wsdl:part element="impl:getPrime" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPrimeResponse">
+
+      <wsdl:part element="impl:getPrimeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Primes">
+
+      <wsdl:operation name="getPrime">
+
+         <wsdl:input message="impl:getPrimeRequest" name="getPrimeRequest"/>
+
+         <wsdl:output message="impl:getPrimeResponse" name="getPrimeResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="PrimesSoapBinding" type="impl:Primes">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getPrime">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPrimeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPrimeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="PrimesService">
+
+      <wsdl:port binding="impl:PrimesSoapBinding" name="Primes">
+
+         <wsdlsoap:address location="http://localhost:9080/PrimesWebService/services/Primes"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
